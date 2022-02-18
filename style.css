@@ -1,0 +1,210 @@
+/* Main styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+/* Other styles */
+html, body {
+  height: 50%;
+}
+
+body {
+  background: #111;
+  background-size: .2em 100%;
+  font: 5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+svg {
+  position: down;
+  width: 63%;
+  height: 63%;
+}
+
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 25px;
+  padding: 5px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+
+h1.deepshadow {
+  color: #e0dfdc;
+  background-color: #111;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+head{
+    background: #111;
+}
+
+a{
+  font-size: 35px;
+}
+
+
+span{
+  text-align: center;
+}
+
+
+.rainbow {
+
+  /* Chrome, Safari, Opera */
+ -webkit-animation: rainbow 20s infinite; 
+ 
+ /* Internet Explorer */
+ -ms-animation: rainbow 20s infinite;
+ 
+ /* Standar Syntax */
+ animation: rainbow 20s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+ 0%{color: rgb(255, 38, 0);}	
+ 10%{color: purple;}	
+   20%{color: red;}
+ 30%{color: CadetBlue;}
+   40%{color: yellow;}
+ 50%{color: coral;}
+   60%{color: green;}
+ 70%{color: cyan;}
+ 80%{color: DeepPink;}
+ 90%{color: DodgerBlue;}
+   100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+  0%{color: orange;}	
+ 10%{color: purple;}	
+   20%{color: red;}
+ 30%{color: CadetBlue;}
+   40%{color: yellow;}
+ 50%{color: coral;}
+   60%{color: green;}
+ 70%{color: cyan;}
+ 80%{color: DeepPink;}
+ 90%{color: DodgerBlue;}
+   100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+   0%{color: orange;}	
+ 10%{color: purple;}	
+   20%{color: red;}
+ 30%{color: CadetBlue;}
+   40%{color: yellow;}
+ 50%{color: coral;}
+   60%{color: green;}
+ 70%{color: cyan;}
+ 80%{color: DeepPink;}
+ 90%{color: DodgerBlue;}
+   100%{color: orange;}
+}
+
+.sr-contact {
+
+/* Chrome, Safari, Opera */
+-webkit-animation: rainbow 20s infinite; 
+ 
+/* Internet Explorer */
+-ms-animation: rainbow 20s infinite;
+
+/* Standar Syntax */
+animation: rainbow 20s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes sr-contact{
+0%{color: orange;}	
+10%{color: purple;}	
+ 20%{color: red;}
+30%{color: CadetBlue;}
+ 40%{color: yellow;}
+50%{color: coral;}
+ 60%{color: green;}
+70%{color: cyan;}
+80%{color: DeepPink;}
+90%{color: DodgerBlue;}
+ 100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes sr-contact{
+0%{color: orange;}	
+10%{color: purple;}	
+ 20%{color: red;}
+30%{color: CadetBlue;}
+ 40%{color: yellow;}
+50%{color: coral;}
+ 60%{color: green;}
+70%{color: cyan;}
+80%{color: DeepPink;}
+90%{color: DodgerBlue;}
+ 100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes sr-contact{
+ 0%{color: orange;}	
+10%{color: purple;}	
+ 20%{color: red;}
+30%{color: CadetBlue;}
+ 40%{color: yellow;}
+50%{color: coral;}
+ 60%{color: green;}
+70%{color: cyan;}
+80%{color: DeepPink;}
+90%{color: DodgerBlue;}
+ 100%{color: orange;}
+}
+
+
