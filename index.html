@@ -1,49 +1,402 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>PLOUK</title>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <meta name=description content="Frero si tu vois ça c'est que ça sent pas bon">
-	 <meta name=keywords content="PLOUK.CF HACK, CHEE, NOOOB, web, script">
-	 <meta name=author content=PLOUK>
-	 <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	 <meta http-equiv=Cache-control content=no-cache>
-	 <meta http-equiv=Expires content=-1>
-   <link rel="stylesheet" href="style.css">
-   <script type="text/javascript" src="main.js"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLOUK.SPACE</title>
+    <style>
+        @font-face {
+            src: url('');
+        }
 
+        @import url('https://allfont.ru/allfont.css?fonts=revue-cyrillic');
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        @-moz-document url-prefix() {
+            html {
+                scrollbar-width: none;
+            }
+        }
+
+        body {
+            margin: 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            overflow-y: scroll;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        body {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 30px;
+            color: white;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .row1 {
+            display: flex;
+            position: fixed;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .column1 {
+            padding: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Revue Cyrillic', arial;
+            font-size: 17px;
+            background-color: #000;
+            color: white;
+        }
+
+        .myVideo {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .content {
+            display: inline-block !important;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            color: #f1f1f1;
+            padding: 20px;
+        }
+
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+        }
+
+        #tsparticles {
+            width: 100%;
+            height: 100%;
+        }
+
+        .login-box form a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #E2A6FF;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 40px;
+            letter-spacing: 4px
+        }
+
+        .login-box a:hover {
+            background: #E2A6FF;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #E2A6FF, 0 0 25px #E2A6FF, 0 0 50px #E2A6FF, 0 0 100px #E2A6FF;
+        }
+
+        .login-box a span {
+            position: absolute;
+            display: block;
+        }
+
+        .login-box a span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #E2A6FF);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #E2A6FF);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: .25s
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #E2A6FF);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: .5s
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #E2A6FF);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: .75s
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+            50%,
+            100% {
+                bottom: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
-<header>
-  <svg viewBox="0 0 600 300">
-    <!-- Symbol-->
-  <symbol id="s-text">
-    <text text-anchor="middle" x="76%" y="50%" dy=".50em">Plouk</text>
-  </symbol>
-  <!-- Duplicate symbols-->
-  <use class="text" xlink:href="#s-text"></use>
-  <use class="text" xlink:href="#s-text"></use>
-  <use class="text" xlink:href="#s-text"></use>
-  <use class="text" xlink:href="#s-text"></use>
-  <use class="text" xlink:href="#s-text"></use>
-	</svg>	
-</header>
+
 <body>
-<h1 class='deepshadow'>IF YOU ARE ON THIS SITE, IT'S BECAUSE YOU'VE BEEN PLAYING "HACKER" ON THE INTERNET TOO MUCH <br> 
-  UNFORTUNATELY, PLOUK YOUR FUCK, OOPS, I MEANT HUMILIATE.</h1>	
-<center>
-  <a href="https://t.me/ploukcf" class="nav-item">
-    <span class="icon rainbow">
-      <i class="fab fa-telegram fa-3x"></i>
-<audio autoplay id="myaudio">
-  <source src="a.mp3" type="audio/mpeg">
-</audio>
+    <div id="captcha">
+        <div class="content">
+            <div class="row1">
+                <div class="column1">
+                    <div class="login-box">
+                        <form>
+                            <a onclick="enterSite();">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    >ENTER<
+                  </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id="mainSite">
+        <video autoplay loop class="myVideo" id="myVideo" playsinline>
+          Your browser does not support HTML5 video.
+        </video>
+
+        <div class="content">
+            <div class="row1">
+                <div class="column1">
+                    <center>
+                        <h1 style="font-family: 'Revue Cyrillic';font-size:30px;color: #ffffff; text-shadow: 1px 0 #000000, 1px 0 #000000, 1px 1px 0 #000000;">PLOUK.SPACE</h1>
+                        <span style="font-family: 'Inconsolata', monospace;text-shadow: 1px 0 #000000, 1px 0 #000000, 1px 1px 0 #000000;" class="typewrite" data-period="1000" data-type='[ "low price", "RAW ATTACK", "hight downtime", "UAM bypass", "hard hits", "more ATTACKS", "L7 protect", "good methods", "stable performance" ]'>...</span>
+                        <div class="columns">
+                            <div class="column">
+                            </div>
+                        </div>
+                        <a href="https://t.me/ploukspace" style="font-family: 'Inconsolata', monospace;color: #ffffff !important;text-shadow: 1px 0 #000000, 1px 0 #000000, 1px 1px 0 #000000;" target="_blank" style="color: #E6E6FA !important;">telegram group [info]
+                    <div class="columns">
+                        <div class="column">
+                        </div>
+                    </div>
+                            <a href="https://t.me/ploukspace" style="font-family: 'Inconsolata', monospace;color: #ffffff !important;text-shadow: 1px 0 #000000, 1px 0 #000000, 1px 1px 0 #000000;" target="_blank" style="color: #E6E6FA !important;">stresser [ddos]
+                        </div>
+                    </div>
+                </center>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.min.js"></script>
 <script>
-  var audio = document.getElementById("myaudio");
-  audio.volume = 0.07;
+        var startId = _currId;
+        var endId = startId + visibleLetters;
+        var finalText;
+        if(endId < _numberOfLetters - 1) {
+            finalText = writeText.substring(startId, endId);
+        } else {
+            var cappedEndId = _numberOfLetters;
+            endId = endId - cappedEndId;
+            finalText = writeText.substring(startId, cappedEndId) +     writeText.substring(0, endId);
+        }
+        document.title = finalText; 
+    }
+    _instance.init = function() {
+        setInterval(updateTitle, interval);
+    };
+    return _instance;
+  }
 </script>
+<script>
+var x = document.getElementById("mainSite");
+var y = document.getElementById("captcha");
+var particles = document.getElementById("captcha");
 
+var source = document.createElement('source');
+
+x.style.display = "none";
+
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+source.setAttribute('src', '/video.mp4');
+video.appendChild(source);
+
+video.pause();
+
+function enterSite() {
+  video.volume = 0.10;
+  video.play();
+  x.style.display = "block";
+  y.style.display = "none";
+  
+
+}
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};
+
+</script>
+</body>
 </html>
